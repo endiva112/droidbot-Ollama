@@ -176,10 +176,15 @@ Selected action number:"""
         """
         if isinstance(event, TouchEvent) and event.view:
             view = event.view
-            text = view.get('text', '').strip()
-            content_desc = view.get('content_description', '').strip()
-            resource_id = view.get('resource_id', '')
-            view_class = view.get('class', '').split('.')[-1]
+            text = view.get('text', '') or ''  # Manejar None
+            text = text.strip() if text else ''
+            
+            content_desc = view.get('content_description', '') or ''
+            content_desc = content_desc.strip() if content_desc else ''
+            
+            resource_id = view.get('resource_id', '') or ''
+            view_class = view.get('class', '') or ''
+            view_class = view_class.split('.')[-1] if view_class else 'Unknown'
             
             # Build description from available info
             parts = []
@@ -216,7 +221,7 @@ Selected action number:"""
         elif isinstance(event, SetTextEvent):
             view_hint = "input field"
             if event.view:
-                text = event.view.get('text', '')
+                text = event.view.get('text', '') or ''
                 if text:
                     view_hint = f"'{text}'"
             return f"{index}. Enter text in {view_hint}"
@@ -229,7 +234,8 @@ Selected action number:"""
             # Generic fallback
             event_type = type(event).__name__
             return f"{index}. {event_type}"
-    
+
+
     def _query_ollama(self, prompt, max_index):
         """
         Query Ollama API and extract action index from response.

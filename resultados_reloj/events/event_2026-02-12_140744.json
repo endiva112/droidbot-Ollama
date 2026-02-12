@@ -1,0 +1,58 @@
+{
+  "tag": "2026-02-12_140744",
+  "event": {
+    "event_type": "long_touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          129,
+          1062
+        ],
+        [
+          951,
+          1209
+        ]
+      ],
+      "resource_id": "com.google.android.deskclock:id/label_input_field",
+      "checked": false,
+      "text": "Hello World",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "822*147",
+      "signature": "[class]android.widget.EditText[resource_id]com.google.android.deskclock:id/label_input_field[text]Hello World[enabled,,]",
+      "view_str": "1772c1c04dfe224fd2976b54ed5ed350",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.google.android.deskclock:id/label_input_field",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<input bound_box=129,1062,951,1209>Hello World</input>"
+    },
+    "duration": 2000
+  },
+  "start_state": "7f6f2001a25b1ed4be47b16977db2740",
+  "stop_state": "7f6f2001a25b1ed4be47b16977db2740",
+  "event_str": "LongTouchEvent(state=7f6f2001a25b1ed4be47b16977db2740, view=1772c1c04dfe224fd2976b54ed5ed350(DeskClock/EditText-Hello Worl))"
+}

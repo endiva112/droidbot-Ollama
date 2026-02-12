@@ -1,0 +1,57 @@
+{
+  "tag": "2026-02-12_140656",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Clock",
+      "children": [
+        13
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          242,
+          145
+        ],
+        [
+          484,
+          343
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "rk",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 12,
+      "size": "242*198",
+      "signature": "[class]rk[resource_id]None[text]None[enabled,,]",
+      "view_str": "012a760b01588e654acf4959144c47b5",
+      "content_free_signature": "[class]rk[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button text='Clock' bound_box=242,145,484,343></button>"
+    }
+  },
+  "start_state": "c9e0a0de8802712f2dad526399d72e01",
+  "stop_state": "9968a2a08774bf0c9eda6bb12457e1f9",
+  "event_str": "TouchEvent(state=c9e0a0de8802712f2dad526399d72e01, view=012a760b01588e654acf4959144c47b5(DeskClock/rk-))"
+}

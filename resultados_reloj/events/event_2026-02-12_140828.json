@@ -1,0 +1,57 @@
+{
+  "tag": "2026-02-12_140828",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Timer",
+      "children": [
+        15
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          484,
+          145
+        ],
+        [
+          726,
+          343
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "rk",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 14,
+      "size": "242*198",
+      "signature": "[class]rk[resource_id]None[text]None[enabled,,]",
+      "view_str": "84893cbc51bf943df9ca788c1a86a4c4",
+      "content_free_signature": "[class]rk[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button text='Timer' bound_box=484,145,726,343></button>"
+    }
+  },
+  "start_state": "9a1b34750cb7da53a63a8a3b55c570d3",
+  "stop_state": "94efe572295b593968f0a80549c1f62f",
+  "event_str": "TouchEvent(state=9a1b34750cb7da53a63a8a3b55c570d3, view=84893cbc51bf943df9ca788c1a86a4c4(DeskClock/rk-))"
+}

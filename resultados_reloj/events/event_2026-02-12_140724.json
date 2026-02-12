@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_140724",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "No label specified",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          458,
+          924
+        ],
+        [
+          621,
+          1056
+        ]
+      ],
+      "resource_id": "com.google.android.deskclock:id/timer_label",
+      "checked": false,
+      "text": "Label",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 55,
+      "temp_id": 58,
+      "size": "163*132",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.deskclock:id/timer_label[text]Label[enabled,,]",
+      "view_str": "e5f307f13f0694999c7695631eb52b48",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.deskclock:id/timer_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "10",
+      "desc": "<button text='No label specified' bound_box=458,924,621,1056>Label</button>"
+    }
+  },
+  "start_state": "b77d275baf363dae6a76de4a0890ce90",
+  "stop_state": "a8f4daaad14b890ea93b20fee7fe2271",
+  "event_str": "TouchEvent(state=b77d275baf363dae6a76de4a0890ce90, view=e5f307f13f0694999c7695631eb52b48(DeskClock/TextView-Label))"
+}

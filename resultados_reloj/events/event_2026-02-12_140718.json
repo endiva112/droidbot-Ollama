@@ -1,0 +1,49 @@
+{
+  "tag": "2026-02-12_140718",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          343
+        ],
+        [
+          1016,
+          2208
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 60,
+      "temp_id": 61,
+      "size": "1016*1865",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "ee15052b618cbb52dbb4540e05612c87",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    }
+  },
+  "start_state": "bdf3c4ec08dc439f240dbcf18a1a3d3b",
+  "stop_state": "079382cdc5969434bf367f96aef4ab4c",
+  "event_str": "TouchEvent(state=bdf3c4ec08dc439f240dbcf18a1a3d3b, view=ee15052b618cbb52dbb4540e05612c87(DeskClock/LinearLayout-))"
+}

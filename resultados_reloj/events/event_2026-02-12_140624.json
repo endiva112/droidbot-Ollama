@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_140624",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          64,
+          1390
+        ],
+        [
+          381,
+          1678
+        ]
+      ],
+      "resource_id": "com.google.android.deskclock:id/timer_setup_digit_7",
+      "checked": false,
+      "text": "7",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 58,
+      "temp_id": 65,
+      "size": "317*288",
+      "signature": "[class]android.widget.Button[resource_id]com.google.android.deskclock:id/timer_setup_digit_7[text]7[enabled,,]",
+      "view_str": "613e9e15e6e5edee8a53e0a15d23b7f9",
+      "content_free_signature": "[class]android.widget.Button[resource_id]com.google.android.deskclock:id/timer_setup_digit_7",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "17",
+      "desc": "<button bound_box=64,1390,381,1678>7</button>"
+    }
+  },
+  "start_state": "888913b5b582e0633b32eb457c7b2a4b",
+  "stop_state": "49d0830f761722a8fc4a4009bf502f61",
+  "event_str": "TouchEvent(state=888913b5b582e0633b32eb457c7b2a4b, view=613e9e15e6e5edee8a53e0a15d23b7f9(DeskClock/Button-7))"
+}

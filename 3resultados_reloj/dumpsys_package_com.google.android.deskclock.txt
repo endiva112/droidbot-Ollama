@@ -268,11 +268,11 @@ Queries:
         com.google.android.deskclock
 
 Package Changes:
-  Sequence number=21
+  Sequence number=19
   User 0:
     seq=0, package=com.google.android.apps.wellbeing
     seq=9, package=com.google.android.gms
-    seq=20, package=io.github.ylimit.droidbotapp
+    seq=18, package=io.github.ylimit.droidbotapp
 
 
 Dexopt state:
