@@ -1,0 +1,433 @@
+--------- beginning of main
+02-12 12:41:53.077  5383  5385 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:53.103  5386  5386 I abb     : StartCommandInProcess(73657474696e67730067657400676c6f settings.get.glo [truncated])
+02-12 12:41:53.108  5386  5391 I abb     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:53.104   525   525 W Binder:525_1A: type=1400 audit(0.0:121): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+02-12 12:41:53.104   525   525 I chatty  : uid=1000(system) Binder:525_3 identical 1 line
+02-12 12:41:53.104   525   525 W Binder:525_1A: type=1400 audit(0.0:123): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+02-12 12:41:53.142  5386  5386 I abb     : StartCommandInProcess(7061636b61676500696e7374616c6c00 package.install. [truncated])
+02-12 12:41:53.168   525   525 W Binder:525_1A: type=1400 audit(0.0:124): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+--------- beginning of system
+02-12 12:41:53.193   525   546 E JobScheduler.Background: App com.google.android.gms became active but still in NEVER bucket
+02-12 12:41:53.193   525   558 I DropBoxManagerService: add tag=system_server_wtf isTagEnabled=true flags=0x2
+02-12 12:41:53.208   525   636 W RuleEvaluation: Integrity rule files are not available.
+02-12 12:41:53.209   525   579 I PackageManager: Integrity check passed for file:///data/app/vmdl1195348038.tmp
+02-12 12:41:53.218   525   579 I PackageManager: Permission ownership changed. Updating all permissions.
+02-12 12:41:53.271   416   424 E installd: Couldn't opendir /data/app/vmdl1195348038.tmp: No such file or directory
+02-12 12:41:53.272   416   424 E installd: Failed to delete /data/app/vmdl1195348038.tmp: No such file or directory
+02-12 12:41:53.277  5386  5395 I abb     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:53.272   525   525 W Binder:525_1A: type=1400 audit(0.0:125): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+--------- beginning of kernel
+02-12 12:41:53.265     0     0 W audit   : audit_lost=22 audit_rate_limit=5 audit_backlog_limit=64
+02-12 12:41:53.266     0     0 E audit   : rate limit exceeded
+02-12 12:41:53.285  3992  5396 E BackupHelper: Could not parse delayed permissions
+02-12 12:41:53.285  3992  5396 E BackupHelper: java.io.FileNotFoundException: /data/user_de/0/com.google.android.permissioncontroller/files/delayed_restore_permissions.xml: open failed: ENOENT (No such file or directory)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at libcore.io.IoBridge.open(IoBridge.java:492)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:636)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at com.android.permissioncontroller.permission.service.BackupHelper.restoreDelayedState(BackupHelper.java:338)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at com.android.permissioncontroller.permission.service.PermissionControllerServiceImpl.onRestoreDelayedRuntimePermissionsBackup(PermissionControllerServiceImpl.java:413)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at com.android.permissioncontroller.permission.service.PermissionControllerServiceImpl.lambda$onApplyStagedRuntimePermissionBackup$4(PermissionControllerServiceImpl.java:407)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at com.android.permissioncontroller.permission.service.PermissionControllerServiceImpl.lambda$onApplyStagedRuntimePermissionBackup$4$PermissionControllerServiceImpl(Unknown Source:0)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at com.android.permissioncontroller.permission.service.-$$Lambda$PermissionControllerServiceImpl$mE7NqZpMEJTKa_y63m6czFzewlg.run(Unknown Source:8)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:305)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at java.lang.Thread.run(Thread.java:923)
+02-12 12:41:53.285  3992  5396 E BackupHelper: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at libcore.io.Linux.open(Native Method)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:166)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:254)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:166)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:7542)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	at libcore.io.IoBridge.open(IoBridge.java:478)
+02-12 12:41:53.285  3992  5396 E BackupHelper: 	... 11 more
+02-12 12:41:53.288  1373  1373 I MediaProvider: Invalidating LocalCallingIdentity cache for package io.github.ylimit.droidbotapp. Reason: package android.intent.action.PACKAGE_ADDED
+02-12 12:41:53.290   525   546 I RoleManagerService: Granting default roles...
+02-12 12:41:53.295  1443  1443 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.ylimit.droidbotapp flg=0x4000010 (has extras) }
+02-12 12:41:53.297   525   558 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.ylimit.droidbotapp flg=0x4000010 (has extras) } to com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver
+02-12 12:41:53.298   525   558 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.ylimit.droidbotapp flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+02-12 12:41:53.298   525   558 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.ylimit.droidbotapp flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+02-12 12:41:53.309   525   627 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS | 
+02-12 12:41:53.312   525   558 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.ylimit.droidbotapp flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+02-12 12:41:53.312   525   558 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.ylimit.droidbotapp flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+02-12 12:41:53.313   525   558 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.ylimit.droidbotapp flg=0x4000010 (has extras) } to com.google.android.ims/.receivers.RcsAutoStartReceiver
+02-12 12:41:53.317  3992  4014 I PermissionControllerServiceImpl: Updating user sensitive for uid 10167
+02-12 12:41:53.323   525   559 I ActivityManager: Start proc 5404:com.google.android.packageinstaller/u0a81 for broadcast {com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver}
+02-12 12:41:53.325  5404  5404 W ackageinstalle: Unexpected CPU variant for X86 using defaults: x86
+02-12 12:41:53.329  5401  5417 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:53.330   525   525 I Telecom : DefaultDialerCache: Refreshing default dialer for user 0: now com.android.dialer: DDC.oR@AHc
+02-12 12:41:53.333   388   415 I adbd    : jdwp connection from 5404
+02-12 12:41:53.355  5404  5404 I ackageinstalle: The ClassLoaderContext is a special shared library.
+02-12 12:41:53.358  1225  5416 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.ylimit.droidbotapp flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+02-12 12:41:53.360  1225  5416 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.ylimit.droidbotapp flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+02-12 12:41:53.374  2823  5429 I Auth    : [SupervisedAccountIntentOperation] onHandleIntent(): android.intent.action.PACKAGE_ADDED
+02-12 12:41:53.378  2823  5441 I ChromeSync: [Sync,SyncIntentOperation] Handling the intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.ylimit.droidbotapp flg=0x4000010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }.
+02-12 12:41:53.382  2823  5429 I FontsPackageChangeOp: Package io.github.ylimit.droidbotapp has no metadata
+02-12 12:41:53.399   525  1048 W ActivityManager: Unable to start service Intent { act=com.google.android.gms.auth.key.retrieval.service.START pkg=com.google.android.gms } U=0: not found
+02-12 12:41:53.404   525  1849 W ActivityManager: Unbind failed: could not find connection for android.os.BinderProxy@f11abb6
+02-12 12:41:53.404  2823  2993 E GmsClient: unable to connect to service: com.google.android.gms.auth.key.retrieval.service.START on com.google.android.gms
+02-12 12:41:53.439   525   627 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS | 
+02-12 12:41:53.441  2823  5441 I ChromeSync: [Persistence,AffiliationManager] One of affiliation or grouping data for android://gbttc-30nINaJL38wzGBzG16tLJsIGpGMovxwiVcS-z_-QQGUJrS3tJUSL94gYlFAj6c8yRXuQFUoAnG-72xwQ==@io.github.ylimit.droidbotapp/ was not found. Marking affiliation data as stale...
+02-12 12:41:53.455  3992  4014 I PermissionControllerServiceImpl: Updating user sensitive for uid 10167
+02-12 12:41:53.459  1225  5437 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package:io.github.ylimit.droidbotapp flg=0x5000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+02-12 12:41:53.494  5454  5458 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:53.505   525   525 I Telecom : DefaultDialerCache: Refreshing default dialer for user 0: now com.android.dialer: DDC.oR@AHo
+02-12 12:41:53.523   525   535 I system_server: Background concurrent copying GC freed 170032(10239KB) AllocSpace objects, 28(2320KB) LOS objects, 50% free, 17MB/34MB, paused 567us total 252.792ms
+02-12 12:41:53.532  1225  5432 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+02-12 12:41:53.543  5462  5462 I mit.droidbotap: Late-enabling -Xcheck:jni
+02-12 12:41:53.543   525   559 I ActivityManager: Start proc 5462:io.github.ylimit.droidbotapp/u0a167 for service {io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService}
+02-12 12:41:53.546  2823  5411 E ConfigFileUtils: Failed to read config file: /data/user_de/0/com.google.android.gms/app_chimera/next_container.pb: open failed: ENOENT (No such file or directory)
+02-12 12:41:53.556  5462  5462 I mit.droidbotap: Unquickening 12 vdex files!
+02-12 12:41:53.561  1225  5432 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package:io.github.ylimit.droidbotapp flg=0x5000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+02-12 12:41:53.565   525   536 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.android.server.AlarmManagerService$2
+02-12 12:41:53.565   525   536 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+02-12 12:41:53.575  5462  5462 W mit.droidbotap: Unexpected CPU variant for X86 using defaults: x86
+02-12 12:41:53.582  1081  1488 E FrameEvents: updateAcquireFence: Did not find frame.
+02-12 12:41:53.588   388   415 I adbd    : jdwp connection from 5462
+02-12 12:41:53.644  1225  5437 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+02-12 12:41:53.654  2823  3064 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=AppsCorpus serviceId=36 [CONTEXT service_id=21 ]
+02-12 12:41:53.682  2823  5411 I ChmraDebugLogger: [73] 1801
+02-12 12:41:53.684  2823  5411 I ChmraDebugLogger: [30] [Pay.optional:201817020000] permitMetered=true,
+02-12 12:41:53.690  2823  5411 W ChimeraConfigService: Retry attempt was throttled.
+02-12 12:41:53.713  2823  3150 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0 [CONTEXT service_id=21 ]
+02-12 12:41:53.720  2823  3141 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=30 [CONTEXT service_id=21 ]
+02-12 12:41:53.736  2823  3150 I Icing   : Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms using seqno 88 [CONTEXT service_id=21 ]
+02-12 12:41:53.765  2823  3150 I chatty  : uid=10121(com.google.android.gms) lowpool[9] identical 1 line
+02-12 12:41:53.768  2823  3150 I Icing   : Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms using seqno 88 [CONTEXT service_id=21 ]
+02-12 12:41:53.788  2823  3150 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms [CONTEXT service_id=21 ]
+02-12 12:41:53.837  2823  3150 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0 [CONTEXT service_id=21 ]
+02-12 12:41:53.841  2823  3150 I Icing   : Indexing done com.google.android.gms-apps [CONTEXT service_id=21 ]
+02-12 12:41:53.853  2823  3150 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms [CONTEXT service_id=21 ]
+02-12 12:41:53.854  2823  3150 I Icing   : Indexing done com.google.android.gms-apps [CONTEXT service_id=21 ]
+02-12 12:41:53.882  2823  3150 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms [CONTEXT service_id=21 ]
+02-12 12:41:53.883  2823  3087 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=36 [CONTEXT service_id=21 ]
+02-12 12:41:53.903  2823  3150 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0 [CONTEXT service_id=21 ]
+02-12 12:41:53.904  2823  3150 I Icing   : Indexing done com.google.android.gms-apps [CONTEXT service_id=21 ]
+02-12 12:41:53.965  5511  5513 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:54.042  5519  5521 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:54.229   181   181 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device manifest.
+02-12 12:41:54.230  5533  5536 I Gralloc4: mapper 4.x is not supported
+02-12 12:41:54.277   181   181 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device manifest.
+02-12 12:41:54.277  5533  5536 W Gralloc4: allocator 3.x is not supported
+02-12 12:41:55.197   525   558 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver
+02-12 12:41:55.197   525   558 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+02-12 12:41:56.308  1271  1271 W KeyboardModeManager: KeyboardModeManager.setInputView():302 setInputView() : inputView = null
+02-12 12:41:56.311  1271  1271 I ProactiveSuggestionsHolderManager: ProactiveSuggestionsHolderManager.destroy():263 trying to destroy ProactiveSuggestionsHolderManager when keyboardViewController is null
+02-12 12:41:56.313  1271  5564 I JapaneseMozcExtension: JapaneseMozcExtension.onDestroyServiceInternal():81 onDestroyServiceInternal()
+02-12 12:41:56.325  5560  5565 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:56.332  1271  1271 E MaestroExtensionImpl: MaestroExtensionImpl.disconnectFromAssistant():478 disconnectFromAssistant() : Client unexpectedly null.
+02-12 12:41:56.350   525  1839 W ActivityTaskManager: Current config: {1.0 310mcc260mnc [en_US] ldltr sw392dp w392dp h750dp 440dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2340) mAppBounds=Rect(0, 136 - 1080, 2208) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.31} unchanged for IME proc io.github.ylimit.droidbotapp
+02-12 12:41:56.441  5583  5585 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:56.710  5593  5593 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+02-12 12:41:56.710  5593  5593 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+02-12 12:41:56.710  5593  5593 I AndroidRuntime: Using default boot image
+02-12 12:41:56.710  5593  5593 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+02-12 12:41:56.710  5593  5593 I AndroidRuntime: Leaving lock profiling enabled
+02-12 12:41:56.710  5593  5593 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+02-12 12:41:56.708  5593  5593 W app_process: type=1400 audit(0.0:128): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8279 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+02-12 12:41:56.726  5593  5593 I app_process: Core platform API reporting enabled, enforcing=false
+02-12 12:41:56.854  5593  5593 W app_process: Unexpected CPU variant for X86 using defaults: x86
+02-12 12:41:56.857  5593  5593 I app_process: The ClassLoaderContext is a special shared library.
+02-12 12:41:56.865  5593  5593 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+02-12 12:41:56.350   525  1839 W ActivityTaskManager: Current config: {1.0 310mcc260mnc [en_US] ldltr sw392dp w392dp h750dp 440dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2340) mAppBounds=Rect(0, 136 - 1080, 2208) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.31} unchanged for IME proc io.github.ylimit.droidbotapp
+02-12 12:41:57.358  5616  5616 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+02-12 12:41:57.359  5616  5616 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+02-12 12:41:57.360  5616  5616 I AndroidRuntime: Using default boot image
+02-12 12:41:57.360  5616  5616 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+02-12 12:41:57.360  5616  5616 I AndroidRuntime: Leaving lock profiling enabled
+02-12 12:41:57.360  5616  5616 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+02-12 12:41:57.361  5616  5616 I app_process: Core platform API reporting enabled, enforcing=false
+02-12 12:41:57.348     0     0 W audit   : audit_lost=24 audit_rate_limit=5 audit_backlog_limit=64
+02-12 12:41:57.349     0     0 E audit   : rate limit exceeded
+02-12 12:41:57.356  5616  5616 W app_process: type=1400 audit(0.0:132): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8279 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+02-12 12:41:57.392  5616  5616 W app_process: Unexpected CPU variant for X86 using defaults: x86
+02-12 12:41:57.393  5616  5616 I app_process: The ClassLoaderContext is a special shared library.
+02-12 12:41:57.401  5616  5616 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+02-12 12:41:57.407   525   547 E RemoteAugmentedAutofillService: Bad service name for flags 1048704: com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService
+02-12 12:41:57.529  5638  5640 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:57.865  5652  5654 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:57.897   179   179 I servicemanager: Since 'apexservice' could not be found, trying to start it as a lazy AIDL service
+02-12 12:41:57.889     0     0 I init    : starting service 'apexd'...
+02-12 12:41:57.893     0     0 I init    : Control message: Processed ctl.interface_start for 'aidl/apexservice' from pid: 179 (/system/bin/servicemanager)
+02-12 12:41:57.964     0     0 I apexd   : Scanning /system/apex for preinstalled data
+02-12 12:41:58.026     0     0 I apexd   : Scanning /system_ext/apex for preinstalled data
+02-12 12:41:58.027     0     0 I apexd   : ... does not exist. Skipping
+02-12 12:41:58.028     0     0 I apexd   : Scanning /product/apex for preinstalled data
+02-12 12:41:58.029     0     0 I apexd   : ... does not exist. Skipping
+02-12 12:41:58.029     0     0 I apexd   : Scanning /vendor/apex for preinstalled data
+02-12 12:41:58.030     0     0 I apexd   : ... does not exist. Skipping
+02-12 12:41:58.031     0     0 I apexd   : Populating APEX database from mounts...
+02-12 12:41:58.032     0     0 I apexd   : Found "/apex/com.android.tethering@300900700" backed by file /system/apex/com.google.android.tethering.apex
+02-12 12:41:58.034     0     0 I apexd   : Found "/apex/com.android.conscrypt@300900703" backed by file /system/apex/com.google.android.conscrypt.apex
+02-12 12:41:58.035     0     0 I apexd   : Found "/apex/com.android.tzdata@300900700" backed by file /system/apex/com.google.android.tzdata2.apex
+02-12 12:41:58.037     0     0 I apexd   : Found "/apex/com.android.ipsec@300900700" backed by file /system/apex/com.google.android.ipsec.apex
+02-12 12:41:58.039     0     0 I apexd   : Found "/apex/com.android.telephony@1" backed by file /system/apex/com.google.android.telephony.apex
+02-12 12:41:58.040     0     0 I apexd   : Found "/apex/com.android.os.statsd@300900700" backed by file /system/apex/com.google.android.os.statsd.apex
+02-12 12:41:58.042     0     0 I apexd   : Found "/apex/com.android.runtime@1" backed by file /system/apex/com.android.runtime.apex
+02-12 12:41:58.044     0     0 I apexd   : Found "/apex/com.android.media.swcodec@300900714" backed by file /system/apex/com.google.android.media.swcodec.apex
+02-12 12:41:58.046     0     0 I apexd   : Found "/apex/com.android.wifi@300900711" backed by file /system/apex/com.google.android.wifi.apex
+02-12 12:41:58.047     0     0 I apexd   : Found "/apex/com.android.resolv@300900700" backed by file /system/apex/com.google.android.resolv.apex
+02-12 12:41:58.049     0     0 I apexd   : Found "/apex/com.android.sdkext@300900700" backed by file /system/apex/com.google.android.sdkext.apex
+02-12 12:41:58.051     0     0 I apexd   : Found "/apex/com.android.adbd@300900700" backed by file /system/apex/com.google.android.adbd.apex
+02-12 12:41:58.053     0     0 I apexd   : Found "/apex/com.android.vndk.v30@1" backed by file /system/apex/com.android.vndk.current.apex
+02-12 12:41:58.054     0     0 I apexd   : Found "/apex/com.android.art@1" backed by file /system/apex/com.android.art.debug.apex
+02-12 12:41:58.056     0     0 I apexd   : Found "/apex/com.android.cellbroadcast@300900720" backed by file /system/apex/com.google.android.cellbroadcast.apex
+02-12 12:41:58.058     0     0 I apexd   : Found "/apex/com.android.mediaprovider@300900719" backed by file /system/apex/com.google.android.mediaprovider.apex
+02-12 12:41:58.060     0     0 I apexd   : Found "/apex/com.android.i18n@1" backed by file /system/apex/com.android.i18n.apex
+02-12 12:41:58.061     0     0 I apexd   : Found "/apex/com.android.extservices@300900700" backed by file /system/apex/com.google.android.extservices.apex
+02-12 12:41:58.063     0     0 I apexd   : Found "/apex/com.android.media@300900700" backed by file /system/apex/com.google.android.media.apex
+02-12 12:41:58.065     0     0 I apexd   : Found "/apex/com.android.permission@300900706" backed by file /system/apex/com.google.android.permission.apex
+02-12 12:41:58.067     0     0 I apexd   : Found "/apex/com.android.apex.cts.shim@1" backed by file /system/apex/com.android.apex.cts.shim.apex
+02-12 12:41:58.068     0     0 I apexd   : Found "/apex/com.android.neuralnetworks@300900700" backed by file /system/apex/com.google.android.neuralnetworks.apex
+02-12 12:41:58.070     0     0 I apexd   : 22 packages restored.
+02-12 12:41:58.070     0     0 I AidlLazyServiceRegistrar: Registering service apexservice
+02-12 12:41:58.083   179   179 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+02-12 12:41:58.086   179   179 I servicemanager: Tried to unregister apexservice, but there is about to be a client.
+02-12 12:41:58.072     0     0 I AidlLazyServiceRegistrar: Trying to shut down the service. No clients in use for any service in process.
+02-12 12:41:58.075     0     0 I AidlLazyServiceRegistrar: Failed to unregister service apexservice
+02-12 12:41:58.280  5680  5682 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:41:58.371   525  1849 I ActivityManager: Force stopping com.google.android.deskclock appid=10130 user=0: from pid 5692
+02-12 12:41:58.430  5697  5697 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+02-12 12:41:58.430  5697  5697 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+02-12 12:41:58.430  5697  5697 I AndroidRuntime: Using default boot image
+02-12 12:41:58.430  5697  5697 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+02-12 12:41:58.430  5697  5697 I AndroidRuntime: Leaving lock profiling enabled
+02-12 12:41:58.430  5697  5697 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+02-12 12:41:58.431  5697  5697 I app_process: Core platform API reporting enabled, enforcing=false
+02-12 12:41:58.428  5697  5697 W app_process: type=1400 audit(0.0:136): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8279 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+02-12 12:41:58.462  5697  5697 W app_process: Unexpected CPU variant for X86 using defaults: x86
+02-12 12:41:58.465  5697  5697 I app_process: The ClassLoaderContext is a special shared library.
+02-12 12:41:58.471  5697  5697 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+02-12 12:41:58.481   525   547 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity (has extras)} from uid 0
+02-12 12:41:58.489   525  1849 W ActivityManager: Unable to start service Intent { act=android.service.appprediction.AppPredictionService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService } U=0: not found
+02-12 12:41:58.489   525  1849 W RemoteAppPredictionService: could not bind to Intent { act=android.service.appprediction.AppPredictionService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService } using flags 67108865
+02-12 12:41:58.946     0     0 W healthd : battery l=100 v=5000 t=25.0 h=2 st=4 c=900000 fc=300000 cc=10 chg=
+02-12 12:42:00.094  5736  5738 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:00.363  5779  5781 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:00.404   179   179 I servicemanager: Notifying apexservice they have clients: 1
+02-12 12:42:00.405   179   179 I servicemanager: Notifying apexservice they have clients: 0
+02-12 12:42:00.394     0     0 I AidlLazyServiceRegistrar: Process has 1 (of 1 available) client(s) in use after notification android.apex.IApexService has clients: 1
+02-12 12:42:00.397     0     0 I AidlLazyServiceRegistrar: Process has 0 (of 1 available) client(s) in use after notification android.apex.IApexService has clients: 0
+02-12 12:42:00.398     0     0 I AidlLazyServiceRegistrar: Trying to shut down the service. No clients in use for any service in process.
+02-12 12:42:00.412   179   179 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+02-12 12:42:00.401     0     0 I AidlLazyServiceRegistrar: Unregistered all clients and exiting
+02-12 12:42:00.404     0     0 I init    : Service 'apexd' (pid 5659) exited with status 0 oneshot service took 2.512000 seconds in background
+02-12 12:42:00.405     0     0 I init    : Sending signal 9 to service 'apexd' (pid 5659) process group...
+02-12 12:42:00.406     0     0 I libprocessgroup: Successfully killed process cgroup uid 0 pid 5659 in 0ms
+02-12 12:42:00.608  5809  5811 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:00.701   525  1849 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.google.android.deskclock/com.android.deskclock.DeskClock} from uid 2000
+02-12 12:42:00.711  5821  5823 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:00.712   399   399 I perfetto: ing_service_impl.cc:758 Configured tracing session 1, #sources:1, duration:5000 ms, #buffers:1, total buffer size:4096 KB, total sessions:1, uid:1071 session name: ""
+02-12 12:42:00.717   525   550 W System  : ClassLoader referenced unknown path: 
+02-12 12:42:00.776   525   559 W ActivityManager: Slow operation: 60ms so far, now at startProcess: returned from zygote!
+02-12 12:42:00.776   525   559 W ActivityManager: Slow operation: 60ms so far, now at startProcess: done updating battery stats
+02-12 12:42:00.776   525   559 W ActivityManager: Slow operation: 60ms so far, now at startProcess: building log message
+02-12 12:42:00.776   525   559 I ActivityManager: Start proc 5831:com.google.android.deskclock/u0a130 for pre-top-activity {com.google.android.deskclock/com.android.deskclock.DeskClock}
+02-12 12:42:00.776   525   559 W ActivityManager: Slow operation: 60ms so far, now at startProcess: starting to update pids map
+02-12 12:42:00.781  5831  5831 W droid.deskcloc: Unexpected CPU variant for X86 using defaults: x86
+02-12 12:42:00.786   525   559 W ActivityManager: Slow operation: 71ms so far, now at startProcess: done updating pids map
+02-12 12:42:00.792   388   415 I adbd    : jdwp connection from 5831
+02-12 12:42:00.804  5831  5831 I droid.deskcloc: The ClassLoaderContext is a special shared library.
+02-12 12:42:00.805  5831  5831 I droid.deskcloc: The ClassLoaderContext is a special shared library.
+02-12 12:42:00.826   214   214 E android.hardware.atrace@1.0-service: Failed to enable tracing on: /sys/kernel/debug/tracing/events/mdss/enable
+02-12 12:42:00.826   214   214 E android.hardware.atrace@1.0-service: Failed to enable tracing on: /sys/kernel/debug/tracing/events/sde/enable
+02-12 12:42:00.826   214   214 E android.hardware.atrace@1.0-service: Failed to enable tracing on: /sys/kernel/debug/tracing/events/mali_systrace/enable
+02-12 12:42:00.826   214   214 E android.hardware.atrace@1.0-service: Failed to disable tracing on: /sys/kernel/debug/tracing/events/mdss/enable
+02-12 12:42:00.826   214   214 E android.hardware.atrace@1.0-service: Failed to disable tracing on: /sys/kernel/debug/tracing/events/sde/enable
+02-12 12:42:00.826   214   214 E android.hardware.atrace@1.0-service: Failed to disable tracing on: /sys/kernel/debug/tracing/events/mali_systrace/enable
+02-12 12:42:00.826   214   214 E android.hardware.atrace@1.0-service: Failed to disable tracing on: /sys/kernel/debug/tracing/events/kmem/ion_alloc_buffer_start/enable
+02-12 12:42:00.827   214   214 E android.hardware.atrace@1.0-service: Failed to enable tracing on: /sys/kernel/debug/tracing/events/kmem/ion_alloc_buffer_start/enable
+02-12 12:42:00.827   214   214 E android.hardware.atrace@1.0-service: Failed to disable tracing on: /sys/kernel/debug/tracing/events/mdss/enable
+02-12 12:42:00.827   214   214 E android.hardware.atrace@1.0-service: Failed to disable tracing on: /sys/kernel/debug/tracing/events/sde/enable
+02-12 12:42:00.827   214   214 E android.hardware.atrace@1.0-service: Failed to disable tracing on: /sys/kernel/debug/tracing/events/mali_systrace/enable
+02-12 12:42:00.827   214   214 E android.hardware.atrace@1.0-service: Failed to disable tracing on: /sys/kernel/debug/tracing/events/kmem/ion_alloc_buffer_start/enable
+02-12 12:42:00.834  5831  5831 W PrimesInit: Primes instant initialization
+02-12 12:42:00.834  5831  5856 W Primes  : background initialization
+02-12 12:42:00.839  5831  5857 I GAv4    : Google Analytics 18.5.89 is starting up. To enable debug logging on a device run:
+02-12 12:42:00.839  5831  5857 I GAv4    :   adb shell setprop log.tag.GAv4 DEBUG
+02-12 12:42:00.839  5831  5857 I GAv4    :   adb logcat -s GAv4
+02-12 12:42:00.868  5831  5861 W GAv4    : AnalyticsReceiver is not registered or is disabled. Register the receiver for reliable dispatching on non-Google Play devices. See http://goo.gl/8Rd3yj for instructions.
+02-12 12:42:00.874  2823  2845 I FontsContentProvider: Received query Google Sans:500, URI content://com.google.android.gms.fonts
+02-12 12:42:00.874  2823  2845 I FontsContentProvider: Query [Google Sans:500] resolved to {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false}
+02-12 12:42:00.882  5831  5861 W GAv4    : CampaignTrackingReceiver is not registered, not exported or is disabled. Installation campaign tracking is not possible. See http://goo.gl/8Rd3yj for instructions.
+02-12 12:42:00.884  2823  2845 I FontsContentProvider: Fetch {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null}
+02-12 12:42:00.887  5831  5861 W GAv4    : AnalyticsService not registered in the app manifest. Hits might not be delivered reliably. See http://goo.gl/8Rd3yj for instructions.
+02-12 12:42:00.888  2823  2845 I FontsContentProvider: Pulling font file for id = 3, cache size = 3
+02-12 12:42:00.895  5831  5856 I PrimesTesting: GserviceFlagsSupplier.get()
+02-12 12:42:00.911  2823  2845 I FontsContentProvider: Received query Google Sans, URI content://com.google.android.gms.fonts
+02-12 12:42:00.911  2823  2845 I FontsContentProvider: Query [Google Sans] resolved to {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false}
+02-12 12:42:00.912  2823  2845 I FontsContentProvider: Fetch {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null}
+02-12 12:42:00.916  2823  3202 I FontsContentProvider: Pulling font file for id = 4, cache size = 4
+02-12 12:42:00.937  5831  5831 I AppLifecycleTracker: onActivityCreated: 
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: Failed to instantiate custom view inflater android.support.v7.app.AppCompatViewInflater. Falling back to default.
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: java.lang.ClassNotFoundException: android.support.v7.app.AppCompatViewInflater
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at java.lang.Class.classForName(Native Method)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at java.lang.Class.forName(Class.java:454)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at java.lang.Class.forName(Class.java:379)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at sa.a(PG:449)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at sa.onCreateView(PG:460)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.view.LayoutInflater.tryCreateView(LayoutInflater.java:1059)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:995)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:959)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:657)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:532)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:479)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at com.android.internal.policy.DecorView.onResourcesLoaded(DecorView.java:2103)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at com.android.internal.policy.PhoneWindow.generateLayout(PhoneWindow.java:2630)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at com.android.internal.policy.PhoneWindow.installDecor(PhoneWindow.java:2693)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at com.android.internal.policy.PhoneWindow.getDecorView(PhoneWindow.java:2116)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at apq.onCreate(PG:4)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at com.android.deskclock.DeskClock.onCreate(PG:31)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.app.Activity.performCreate(Activity.java:7994)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.app.Activity.performCreate(Activity.java:7978)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1309)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3422)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3601)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:85)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2066)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.os.Looper.loop(Looper.java:223)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at android.app.ActivityThread.main(ActivityThread.java:7656)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at java.lang.reflect.Method.invoke(Native Method)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: Caused by: java.lang.ClassNotFoundException: android.support.v7.app.AppCompatViewInflater
+02-12 12:42:00.946  5831  5831 I AppCompatDelegate: 	... 32 more
+02-12 12:42:00.953  5831  5831 I AppCompatViewInflater: app:theme is now deprecated. Please move to using android:theme instead.
+02-12 12:42:00.964  2823  2845 I FontsContentProvider: Received query Google Sans:500, URI content://com.google.android.gms.fonts
+02-12 12:42:00.964  2823  2845 I FontsContentProvider: Query [Google Sans:500] resolved to {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false}
+02-12 12:42:00.965  2823  2845 I FontsContentProvider: Fetch {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null}
+02-12 12:42:00.991  2823  2845 I FontsContentProvider: Pulling font file for id = 5, cache size = 5
+02-12 12:42:01.012  5831  5831 I AppLifecycleTracker: onActivityStarted: 
+02-12 12:42:01.012  5831  5831 I AppLifecycleTracker: App transition to foreground
+02-12 12:42:01.014  5831  5831 I AppLifecycleTracker: onActivityResumed: 
+02-12 12:42:01.038  2823  2845 I FontsContentProvider: Received query Google Sans, URI content://com.google.android.gms.fonts
+02-12 12:42:01.040  2823  2845 I FontsContentProvider: Query [Google Sans] resolved to {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false}
+02-12 12:42:01.045  2823  2845 I FontsContentProvider: Fetch {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null}
+02-12 12:42:01.048  2823  2845 I FontsContentProvider: Pulling font file for id = 6, cache size = 6
+02-12 12:42:01.077   330   330 I android.hardware.vibrator-service.example: Vibrator reporting capabilities
+02-12 12:42:01.083  5831  5857 I AlarmClock: Checking if assistant workflow is available
+02-12 12:42:01.090  5831  5863 I AlarmClock: Priming ringtone title cache
+02-12 12:42:01.106   394   394 I perfetto: probes_producer.cc:230  Ftrace setup (target_buf=1)
+02-12 12:42:01.121   181   181 I hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device manifest.
+02-12 12:42:01.122  5831  5865 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+02-12 12:42:01.186  5877  5879 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:01.202   181   181 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device manifest.
+02-12 12:42:01.202  5831  5865 I Gralloc4: mapper 4.x is not supported
+02-12 12:42:01.235   394   394 I perfetto: ftrace_procfs.cc:176    enabled ftrace
+02-12 12:42:01.224     0     0 W perfetto: enabled ftrace
+02-12 12:42:01.299   345  1103 W ServiceManager: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10130 pid=5831
+02-12 12:42:01.307   525   557 I ActivityTaskManager: Displayed com.google.android.deskclock/com.android.deskclock.DeskClock: +585ms
+02-12 12:42:01.307   525   557 I ActivityTaskManager: Fully drawn com.google.android.deskclock/com.android.deskclock.DeskClock: +598ms
+02-12 12:42:01.334  1271  1332 I PeriodicStatsRunner: PeriodicStatsRunner.call():180 call()
+02-12 12:42:01.368  1400  5888 I PBSessionCacheImpl: Deleted sessionId[6159036015085697] from persistence.
+02-12 12:42:01.381  1271  1332 I putmethod.lati: Explicit concurrent copying GC freed 12022(501KB) AllocSpace objects, 22(1144KB) LOS objects, 24% free, 5074KB/6765KB, paused 334us total 47.141ms
+02-12 12:42:01.386  1271  1287 I putmethod.lati: WaitForGcToComplete blocked Background on HeapTrim for 48.737ms
+02-12 12:42:01.406  1400  2174 W SearchServiceCore: Abort, client detached.
+02-12 12:42:01.408  1400  2174 I MicroDetectionState: Should stop hotword detection immediately - false
+02-12 12:42:01.431  1271  1332 I TiresiasImpl: TiresiasImpl.setupTrainingCache():1431 setupTrainingCache()
+02-12 12:42:01.431  1271  1332 I Tiresias: TrainingCache.getCacheConfig():182 getCacheConfig()
+02-12 12:42:01.454  1271  1332 I Tiresias: TrainingCache.createMultiCollectionClient():135 createMultiCollectionClient(): Finished in 23 ms
+02-12 12:42:01.459  1271  1332 W PeriodicStatsRunner: PeriodicStatsRunner.call():237 call() : Finished in 120 ms
+02-12 12:42:01.537  1271  1332 I TrainingCachePoolImpl: TrainingCachePoolImpl$RefCountedTrainingCache.addClient():94 Using cache tiresias for client mrv@5222a02, new refcount=1
+02-12 12:42:01.553  1271  5905 I SqliteObjectDatabaseHelper: SqliteObjectDatabaseHelper.onOpen():52 [SqliteObjectDatabaseHelper.onOpen] version N/A => 1
+02-12 12:42:01.556  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table cc up-to-date, skipping.
+02-12 12:42:01.557  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table kl up-to-date, skipping.
+02-12 12:42:01.574  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table c up-to-date, skipping.
+02-12 12:42:01.575  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table d up-to-date, skipping.
+02-12 12:42:01.576  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table tpb up-to-date, skipping.
+02-12 12:42:01.576  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table nia up-to-date, skipping.
+02-12 12:42:01.576  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table cm up-to-date, skipping.
+02-12 12:42:01.577  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table es up-to-date, skipping.
+02-12 12:42:01.578  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table tf up-to-date, skipping.
+02-12 12:42:01.579  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table s up-to-date, skipping.
+02-12 12:42:01.581  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table tm up-to-date, skipping.
+02-12 12:42:01.587  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table vo up-to-date, skipping.
+02-12 12:42:01.588  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table ic up-to-date, skipping.
+02-12 12:42:01.588  1271  5905 I SqliteObjectCollectionManager: SqliteObjectCollectionManager.createOrMigrateCollection():109 Table tp up-to-date, skipping.
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: Conv2QueryReflectionHelper.getConv2QueryPeriodicMetadata():63 Failed to get Conv2QueryPeriodicMetadata.
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: java.lang.NoSuchMethodException: com.google.android.apps.inputmethod.libs.search.sense.Conv2QueryMetadataHelper.getInstance []
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at java.lang.Class.getMethod(Class.java:2072)
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at java.lang.Class.getDeclaredMethod(Class.java:2050)
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at bvn.a(PG:769)
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at bvo.a(PG:140)
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at kpn.a(PG:3)
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at bvn.a(PG:614)
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at kqj.a(PG:35)
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at kqj.handleMessage(PG:55)
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at android.os.Looper.loop(Looper.java:223)
+02-12 12:42:01.591  1271  1768 E Conv2QueryReflectionHelper: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+02-12 12:42:01.595   525  3281 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:01.596   525  3281 I chatty  : uid=1000(system) Binder:525_20 identical 2 lines
+02-12 12:42:01.596   525  3281 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:01.686   525  1839 W UriGrantsManagerService: No permission grants found for com.google.android.deskclock
+02-12 12:42:01.945  5934  5936 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:02.203  5961  5963 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:02.428  5992  5994 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:02.489  6005  6007 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:02.773  6036  6038 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:03.255  6090  6092 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:03.492  6117  6119 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:03.744  6146  6148 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:03.983  6173  6175 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:04.457  6227  6229 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:04.603   525  3281 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:04.603   525  3281 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:04.694  6254  6256 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:04.936  6283  6285 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:05.411  6337  6339 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:05.652  6364  6366 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:05.716   394   394 I perfetto: probes_producer.cc:329  Producer stop (id=1)
+02-12 12:42:05.717   399   399 I perfetto: ng_service_impl.cc:1948 Tracing session 1 ended, total sessions:0
+02-12 12:42:05.718   394   394 I perfetto: ftrace_procfs.cc:183    disabled ftrace
+02-12 12:42:05.706     0     0 W perfetto: disabled ftrace
+02-12 12:42:05.722   419  5825 I iorapd  : Perfetto TraceBuffer saved to file: /data/misc/iorapd/com.google.android.deskclock/62000712/com.android.deskclock.DeskClock/raw_traces/1770900125720937100.perfetto_trace.pb
+02-12 12:42:05.901  6393  6395 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:06.140  6420  6422 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:06.383  6447  6449 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:06.626  6476  6478 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:07.344  6560  6562 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:07.586  6587  6589 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:07.828  6616  6618 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:08.069  6645  6647 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:08.305  6672  6674 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:08.538  6699  6701 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:08.821  6726  6728 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:09.063  6755  6757 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:09.302  6782  6784 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:09.541  6809  6811 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:09.776  6836  6838 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:10.010  6863  6865 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:10.221   525   546 E JobScheduler.Background: App com.google.android.gms became active but still in NEVER bucket
+02-12 12:42:10.223   525   558 I DropBoxManagerService: add tag=system_server_wtf isTagEnabled=true flags=0x2
+02-12 12:42:10.250  6892  6894 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:10.485  6919  6921 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:10.722  6946  6947 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:10.958  6974  6976 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:11.196  7003  7004 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:11.432  7031  7033 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:11.671  7058  7060 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:11.908  7085  7087 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:12.151  7114  7116 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:12.229   525   558 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver
+02-12 12:42:12.229   525   558 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+02-12 12:42:12.424  7147  7149 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:12.662  7174  7176 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:12.919  7201  7203 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:13.153  7228  7229 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:13.391  7258  7260 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:13.624  7285  7287 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:13.864  7313  7315 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:14.101  7340  7342 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:14.337  7369  7371 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:14.571  7396  7398 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:18.032   525   677 E ClipboardService: Denying clipboard access to com.android.chrome, application is not in focus nor is it a system service for user 0
+02-12 12:42:18.200  7429  7431 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:18.443  7458  7460 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:18.679  7485  7487 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:19.149  7540  7542 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+02-12 12:42:19.624  7596  7598 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4

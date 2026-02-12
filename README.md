@@ -1,85 +1,178 @@
-![DroidBot UTG](droidbot/resources/dummy_documents/droidbot_utg.png)
+# 🤖 DroidBot + Ollama: Exploración Guiada por IA
 
-# DroidBot
+Integración de Ollama (LLM local) con DroidBot para exploración inteligente de apps Android.
 
-## News
+## 🎯 ¿Qué hace?
 
-:fire: Check out our recent work on integrating LLM with DroidBot to support intelligent task automation on smartphones! [AutoDroid](https://github.com/MobileLLM/AutoDroid)
+En lugar de tocar botones aleatoriamente, **Ollama decide** qué acciones tomar basándose en el estado actual de la interfaz de la app.
 
-## About
-DroidBot is a lightweight test input generator for Android.
-It can send random or scripted input events to an Android app, achieve higher test coverage more quickly, and generate a UI transition graph (UTG) after testing.
+## 🚀 Instalación Rápida
 
-A sample UTG is shown [here](http://honeynet.github.io/droidbot/report_com.yelp.android/).
+### 1. Verifica que Ollama funciona
 
-DroidBot has the following advantages as compared with other input generators:
-
-1. It does not require system modification or app instrumentation;
-2. Events are based on a GUI model (instead of random);
-3. It is programmable (can customize input for certain UI);
-4. It can produce UI structures and method traces for analysis.
-
-**Reference**
-
-[Li, Yuanchun, et al. "DroidBot: a lightweight UI-guided test input generator for Android." In Proceedings of the 39th International Conference on Software Engineering Companion (ICSE-C '17). Buenos Aires, Argentina, 2017.](http://dl.acm.org/citation.cfm?id=3098352)
-
-## Prerequisite
-
-1. `Python` (both 2 and 3 are supported)
-2. `Java`
-3. `Android SDK`
-4. Add `platform_tools` directory in Android SDK to `PATH`
-5. (Optional) `OpenCV-Python` if you want to run DroidBot in cv mode.
-
-## How to install
-
-Clone this repo and install with `pip`:
-
-```shell
-git clone https://github.com/honeynet/droidbot.git
-cd droidbot/
-pip install -e .
+```bash
+python test_ollama.py
 ```
 
-If successfully installed, you should be able to execute `droidbot -h`.
+Debe pasar los 3 tests. Si falla:
+```bash
+# Inicia Ollama
+ollama serve
 
-## How to use
+# Descarga un modelo (en otra terminal)
+ollama pull gemma2:2b
+```
 
-1. Make sure you have:
+### 2. Instala el archivo en DroidBot
 
-    + `.apk` file path of the app you want to analyze.
-    + A device or an emulator connected to your host machine via `adb`.
+```bash
+# Copia input_policy3.py a tu fork de DroidBot
+cp input_policy3.py /ruta/a/tu/droidbot-fork/droidbot/
 
-2. Start DroidBot:
+# Verifica que se importa correctamente
+cd /ruta/a/tu/droidbot-fork
+python -c "from droidbot.input_policy3 import LLM_Guided_Policy; print('✓ OK')"
+```
 
-    ```
-    droidbot -a <path_to_apk> -o output_dir
-    ```
-    That's it! You will find much useful information, including the UTG, generated in the output dir.
+### 3. ¡Usa DroidBot con Ollama!
 
-    + If you are using multiple devices, you may need to use `-d <device_serial>` to specify the target device. The easiest way to determine a device's serial number is calling `adb devices`.
-    + On some devices, you may need to manually turn on accessibility service for DroidBot (required by DroidBot to get current view hierarchy).
-    + If you want to test a large scale of apps, you may want to add `-keep_env` option to avoid re-installing the test environment every time.
-    + You can also use a json-format script to customize input for certain states. Here are some [script samples](script_samples/). Simply use `-script <path_to_script.json>` to use DroidBot with a script.
-    + If your apps do not support getting views through Accessibility (e.g., most games based on Cocos2d, Unity3d), you may find `-cv` option helpful.
-    + You can use `-humanoid` option to let DroidBot communicate with [Humanoid](https://github.com/yzygitzh/Humanoid) in order to generate human-like test inputs.
-    + You may find other useful features in `droidbot -h`.
+```bash
+python -m droidbot \
+    -a tu_app.apk \
+    -o resultados/ \
+    -policy llm_guided \
+    -count 100
+```
 
-## Evaluation
+## ⚙️ Configuración
 
-We have conducted several experiments to evaluate DroidBot by testing apps with DroidBot and Monkey.
-The results can be found at [DroidBot Posts](http://honeynet.github.io/droidbot/).
-A sample evaluation report can be found [here](http://honeynet.github.io/droidbot/2015/07/30/Evaluation_Report_2015-07-30_1501.html).
+### Cambiar modelo de Ollama
 
-## Acknowledgement
+Usa variables de entorno:
 
-1. [AndroidViewClient](https://github.com/dtmilano/AndroidViewClient)
-2. [Androguard](http://code.google.com/p/androguard/)
-3. [The Honeynet project](https://www.honeynet.org/)
-4. [Google Summer of Code](https://summerofcode.withgoogle.com/)
+```bash
+export OLLAMA_MODEL="llama3"
+python -m droidbot -policy llm_guided ...
+```
 
-## Useful links
+O modifica `input_policy3.py` línea 25:
+```python
+self.ollama_model = ollama_model or os.getenv("OLLAMA_MODEL", "llama3")
+```
 
-- [DroidBot Blog Posts](http://honeynet.github.io/droidbot/)
-- [droidbotApp Source Code](https://github.com/ylimit/droidbotApp)
-- [How to contact the author](http://ylimit.github.io)
+### Ollama en otro servidor
+
+```bash
+export OLLAMA_URL="http://192.168.1.100:11434/api/chat"
+python -m droidbot -policy llm_guided ...
+```
+
+## 📊 Modelos recomendados
+
+| Modelo | Tamaño | Velocidad | Calidad |
+|--------|--------|-----------|---------|
+| `gemma2:2b` | 1.6 GB | ⚡⚡⚡ Muy rápido | ⭐⭐ Básica |
+| `gemma2:9b` | 5.5 GB | ⚡⚡ Rápido | ⭐⭐⭐ Buena |
+| `llama3` | 4.7 GB | ⚡⚡ Rápido | ⭐⭐⭐ Buena |
+| `llama3:70b` | 40 GB | ⚡ Lento | ⭐⭐⭐⭐⭐ Excelente |
+
+Para descargar:
+```bash
+ollama pull gemma2:9b
+```
+
+## 🔍 ¿Cómo funciona?
+
+```
+┌─────────────────────────────────────────┐
+│  1. DroidBot captura estado de la app  │
+│     (actividad, botones, inputs...)     │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│  2. Construye prompt para Ollama:       │
+│                                          │
+│     "Opciones disponibles:              │
+│      0. Touch 'Login'                   │
+│      1. Touch 'Register'                │
+│      2. Scroll DOWN                     │
+│      3. Press BACK                      │
+│                                          │
+│     ¿Qué acción elegir?"                │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│  3. Ollama responde: "1"                │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│  4. DroidBot ejecuta: Touch 'Register'  │
+└─────────────────────────────────────────┘
+```
+
+## 📁 Archivos incluidos
+
+- **`input_policy3.py`** ⭐ - El archivo principal (cópialo a droidbot/)
+- **`test_ollama.py`** - Script de prueba
+- **`INTEGRACION_OLLAMA.md`** - Guía detallada
+- **`input_policy_ollama.py`** - Versión alternativa (no necesaria)
+- **`input_manager_example.py`** - Ejemplo de referencia
+
+## 🐛 Solución de problemas
+
+### "Could not connect to Ollama"
+
+```bash
+# Verifica que Ollama está corriendo
+curl http://localhost:11434/api/tags
+
+# Si no responde, inicia Ollama
+ollama serve
+```
+
+### "Module 'input_policy3' not found"
+
+```bash
+# Verifica la ruta del archivo
+ls /ruta/a/droidbot/droidbot/input_policy3.py
+
+# Debe existir en el mismo directorio que input_policy.py
+```
+
+### Ollama siempre elige acciones aleatorias
+
+1. Prueba con un modelo más grande: `llama3` o `gemma2:9b`
+2. Revisa los logs para ver qué responde Ollama:
+   ```bash
+   python -m droidbot ... --debug 2>&1 | grep -i ollama
+   ```
+
+## 📈 Mejoras futuras
+
+Ideas para extender la funcionalidad:
+
+1. **Análisis visual**: Enviar screenshots a modelos con visión (LLaVA)
+2. **Memoria de exploración**: Evitar loops recordando acciones previas
+3. **Objetivos dirigidos**: "Encuentra el botón de login"
+4. **Respuestas estructuradas**: Usar JSON para respuestas más ricas
+5. **Documentación automática**: Ollama describe lo que hace cada pantalla
+
+## 📚 Más información
+
+- [DroidBot oficial](https://github.com/honeynet/droidbot)
+- [Ollama oficial](https://ollama.ai/)
+- [Documentación de modelos](https://ollama.ai/library)
+
+## 🙋 Contribuir
+
+Si mejoras esta integración, considera:
+- Compartir tus prompts optimizados
+- Reportar bugs con modelos específicos
+- Sugerir nuevas estrategias de exploración
+
+---
+
+**¿Preguntas?** Revisa `INTEGRACION_OLLAMA.md` para la guía detallada.

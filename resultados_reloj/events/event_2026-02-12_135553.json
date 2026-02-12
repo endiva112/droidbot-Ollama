@@ -1,0 +1,11 @@
+{
+  "tag": "2026-02-12_135553",
+  "event": {
+    "event_type": "kill_app",
+    "log_lines": null,
+    "stop_intent": "am force-stop com.google.android.deskclock"
+  },
+  "start_state": "109a3759999df697cfff8f83b112ff74",
+  "stop_state": "109a3759999df697cfff8f83b112ff74",
+  "event_str": "KillAppEvent()"
+}
