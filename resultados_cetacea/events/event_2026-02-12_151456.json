@@ -1,0 +1,59 @@
+{
+  "tag": "2026-02-12_151456",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.android.systemui",
+      "visible": true,
+      "checkable": true,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Battery Saver",
+      "children": [
+        44
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          895,
+          269
+        ],
+        [
+          1027,
+          401
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Off",
+      "class": "android.widget.Switch",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 14,
+      "temp_id": 43,
+      "size": "132*132",
+      "signature": "[class]android.widget.Switch[resource_id]None[text]Off[enabled,,]",
+      "view_str": "c57a471f8e03b40a5d368f6f7faf4583",
+      "content_free_signature": "[class]android.widget.Switch[resource_id]None",
+      "allowed_actions": [
+        "select",
+        "unselect",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<checkbox text='Battery Saver' bound_box=895,269,1027,401>Off</checkbox>"
+    }
+  },
+  "start_state": "085a57c580c07cd284cd8cb681860b02",
+  "stop_state": "085a57c580c07cd284cd8cb681860b02",
+  "event_str": "TouchEvent(state=085a57c580c07cd284cd8cb681860b02, view=c57a471f8e03b40a5d368f6f7faf4583(MainActivity/Switch-Off))"
+}

@@ -28,7 +28,11 @@ class App(object):
         from androguard.core.bytecodes.apk import APK
         self.apk = APK(self.app_path)
         self.package_name = self.apk.get_package()
-        self.app_name = self.apk.get_app_name()
+        try:
+            self.app_name = self.apk.get_app_name()
+        except Exception as e:
+            print(f"[WARNING] No se pudo obtener el nombre de la app: {e}")
+            self.app_name = "unknown_app"
         self.main_activity = self.apk.get_main_activity()
         self.permissions = self.apk.get_permissions()
         self.activities = self.apk.get_activities()

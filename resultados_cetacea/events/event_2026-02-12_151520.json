@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_151520",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.cetacea",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          171,
+          2084
+        ],
+        [
+          380,
+          2150
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Especies",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 66,
+      "temp_id": 67,
+      "size": "209*66",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Especies[enabled,,]",
+      "view_str": "c0635b46baa149ea105678e024211c2d",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "22",
+      "desc": "<button bound_box=171,2084,380,2150>Especies</button>"
+    }
+  },
+  "start_state": "2f4652425680655584b5ecb67d4700ff",
+  "stop_state": "085a57c580c07cd284cd8cb681860b02",
+  "event_str": "TouchEvent(state=2f4652425680655584b5ecb67d4700ff, view=c0635b46baa149ea105678e024211c2d(MainActivity/TextView-Especies))"
+}

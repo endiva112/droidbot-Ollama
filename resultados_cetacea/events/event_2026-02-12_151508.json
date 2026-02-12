@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_151508",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.cetacea",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Previous",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          127,
+          1741
+        ],
+        [
+          270,
+          1884
+        ]
+      ],
+      "resource_id": "com.cetacea:id/exo_prev",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 51,
+      "temp_id": 52,
+      "size": "143*143",
+      "signature": "[class]android.widget.ImageButton[resource_id]com.cetacea:id/exo_prev[text]None[enabled,,]",
+      "view_str": "5ec7f6b86a039a228242a3965d32dd59",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]com.cetacea:id/exo_prev",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "14",
+      "desc": "<button text='Previous' bound_box=127,1741,270,1884></button>"
+    }
+  },
+  "start_state": "2f4652425680655584b5ecb67d4700ff",
+  "stop_state": "2f4652425680655584b5ecb67d4700ff",
+  "event_str": "TouchEvent(state=2f4652425680655584b5ecb67d4700ff, view=5ec7f6b86a039a228242a3965d32dd59(MainActivity/ImageButton-))"
+}
