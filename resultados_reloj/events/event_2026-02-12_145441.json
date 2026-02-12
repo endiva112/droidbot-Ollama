@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_145441",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          198,
+          1712
+        ],
+        [
+          475,
+          1771
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Snooze length",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 43,
+      "temp_id": 44,
+      "size": "277*59",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Snooze length[enabled,,]",
+      "view_str": "2c4f4ac4cf50d7586bad452003fa4819",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "14",
+      "desc": "<button bound_box=198,1712,475,1771>Snooze length</button>"
+    }
+  },
+  "start_state": "785455fa5124fd30c23755d1d03b12f7",
+  "stop_state": "46466fa68bb30e9280421f8d8dd5bfc8",
+  "event_str": "TouchEvent(state=785455fa5124fd30c23755d1d03b12f7, view=2c4f4ac4cf50d7586bad452003fa4819(SettingsActivity/TextView-Snooze len))"
+}

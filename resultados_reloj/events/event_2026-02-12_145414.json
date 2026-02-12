@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_145414",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          67,
+          172
+        ],
+        [
+          175,
+          315
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Alarm",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "108*143",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Alarm[enabled,,]",
+      "view_str": "03d5ab8484dddfd41d1c778a065c11f9",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=67,172,175,315>Alarm</button>"
+    }
+  },
+  "start_state": "33b48de155538c8e146d30fb2b53312a",
+  "stop_state": "ae45b968b6c12f46f8ac2770b1c348aa",
+  "event_str": "TouchEvent(state=33b48de155538c8e146d30fb2b53312a, view=03d5ab8484dddfd41d1c778a065c11f9(DeskClock/TextView-Alarm))"
+}

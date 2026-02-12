@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_145317",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Start",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          463,
+          2010
+        ],
+        [
+          617,
+          2164
+        ]
+      ],
+      "resource_id": "com.google.android.deskclock:id/fab",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 92,
+      "size": "154*154",
+      "signature": "[class]android.widget.ImageButton[resource_id]com.google.android.deskclock:id/fab[text]None[enabled,,]",
+      "view_str": "7770182a7d9607d4c0e0830922032299",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]com.google.android.deskclock:id/fab",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "13",
+      "desc": "<button text='Start' bound_box=463,2010,617,2164></button>"
+    }
+  },
+  "start_state": "c2fe6fa3486529b52b01d1604995e470",
+  "stop_state": "afb80168ccfefff77c9bb49c6f5b4482",
+  "event_str": "TouchEvent(state=c2fe6fa3486529b52b01d1604995e470, view=7770182a7d9607d4c0e0830922032299(DeskClock/ImageButton-))"
+}

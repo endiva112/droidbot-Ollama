@@ -1,0 +1,57 @@
+{
+  "tag": "2026-02-12_145307",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Stopwatch",
+      "children": [
+        17
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          726,
+          145
+        ],
+        [
+          969,
+          343
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "rk",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 16,
+      "size": "243*198",
+      "signature": "[class]rk[resource_id]None[text]None[enabled,,]",
+      "view_str": "74df5e1181bf053263b51735993ee651",
+      "content_free_signature": "[class]rk[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<button text='Stopwatch' bound_box=726,145,969,343></button>"
+    }
+  },
+  "start_state": "c2fe6fa3486529b52b01d1604995e470",
+  "stop_state": "4195a55ee6934ff5b70c9d98164e81dc",
+  "event_str": "TouchEvent(state=c2fe6fa3486529b52b01d1604995e470, view=74df5e1181bf053263b51735993ee651(DeskClock/rk-))"
+}

@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_145517",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          198,
+          1771
+        ],
+        [
+          393,
+          1824
+        ]
+      ],
+      "resource_id": "android:id/summary",
+      "checked": false,
+      "text": "21 minutes",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 43,
+      "temp_id": 45,
+      "size": "195*53",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/summary[text]21 minutes[enabled,,]",
+      "view_str": "8880b753cdde7d7e4180e15d4238006e",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/summary",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "15",
+      "desc": "<button bound_box=198,1771,393,1824>21 minutes</button>"
+    }
+  },
+  "start_state": "c48e1852d28d9359e0ddb59a67369a1e",
+  "stop_state": "0187c5371e70f736e0e38714a1b97fc2",
+  "event_str": "TouchEvent(state=c48e1852d28d9359e0ddb59a67369a1e, view=8880b753cdde7d7e4180e15d4238006e(SettingsActivity/TextView-21 minutes))"
+}

@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_145312",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          552,
+          172
+        ],
+        [
+          657,
+          315
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Timer",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 15,
+      "size": "105*143",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Timer[enabled,,]",
+      "view_str": "a6ebb25908cfb0872d0c690e0b281aac",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button bound_box=552,172,657,315>Timer</button>"
+    }
+  },
+  "start_state": "4195a55ee6934ff5b70c9d98164e81dc",
+  "stop_state": "c2fe6fa3486529b52b01d1604995e470",
+  "event_str": "TouchEvent(state=4195a55ee6934ff5b70c9d98164e81dc, view=a6ebb25908cfb0872d0c690e0b281aac(DeskClock/TextView-Timer))"
+}

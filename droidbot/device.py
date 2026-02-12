@@ -705,22 +705,110 @@ class Device(object):
                 main_activity = activity
         return main_activity
 
+    def is_system_app(self, package_name):
+        """
+        Check if a package is a system app that cannot be uninstalled.
+        :param package_name: str, package name to check
+        :return: bool, True if it's a system app
+        """
+        try:
+            # Obtener información del paquete
+            output = self.adb.shell(f"dumpsys package {package_name}")
+            
+            # Buscar rutas de instalación
+            # Apps del sistema están en /system, /vendor, /product
+            # Apps de usuario están en /data
+            for line in output.split('\n'):
+                line = line.strip()
+                if 'codePath=' in line:
+                    if '/system/' in line or '/vendor/' in line or '/product/' in line:
+                        self.logger.debug(f"{package_name} is a system app (path: {line})")
+                        return True
+                    elif '/data/' in line:
+                        self.logger.debug(f"{package_name} is a user app (path: {line})")
+                        return False
+            
+            # Si no encontramos información, asumir que no es del sistema
+            return False
+            
+        except Exception as e:
+            self.logger.warning(f"Could not determine if {package_name} is system app: {e}")
+            # En caso de duda, asumir que NO es del sistema (mejor intentar desinstalar)
+            return False
+
     def uninstall_app(self, app):
         """
         Uninstall an app from device.
+        Automatically detects and skips system apps.
         :param app: an instance of App or a package name
         """
         if isinstance(app, App):
             package_name = app.get_package_name()
         else:
             package_name = app
-        if package_name in self.adb.get_installed_apps():
-            uninstall_cmd = ["adb", "-s", self.serial, "uninstall", package_name]
-            uninstall_p = subprocess.Popen(uninstall_cmd, stdout=subprocess.PIPE)
-            while package_name in self.adb.get_installed_apps():
-                print("Please wait while uninstalling the app...")
-                time.sleep(2)
-            uninstall_p.terminate()
+        
+        # Verificar si la app está instalada
+        if package_name not in self.adb.get_installed_apps():
+            self.logger.info(f"App {package_name} is not installed, skipping uninstall")
+            return
+        
+        # Verificar si es una app del sistema
+        if self.is_system_app(package_name):
+            self.logger.info(f"{package_name} is a system app, cannot uninstall")
+            return
+        
+        self.logger.info(f"Uninstalling {package_name}...")
+        uninstall_cmd = ["adb", "-s", self.serial, "uninstall", package_name]
+        
+        try:
+            # Ejecutar comando de desinstalación
+            result = subprocess.run(
+                uninstall_cmd,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                timeout=15,  # Timeout de 15 segundos
+                text=True
+            )
+            
+            # Verificar resultado
+            if result.returncode != 0 or "Failure" in result.stdout or "Failure" in result.stderr:
+                error_msg = result.stdout + result.stderr
+                self.logger.warning(f"Failed to uninstall {package_name}: {error_msg}")
+                
+                # Casos comunes de error
+                if "DELETE_FAILED_INTERNAL_ERROR" in error_msg:
+                    self.logger.info("App might be a system app or protected")
+                elif "Unknown package" in error_msg:
+                    self.logger.info("Package not found or already uninstalled")
+                
+                return
+            
+            # Verificar que se desinstaló (con timeout)
+            max_checks = 10
+            for i in range(max_checks):
+                if package_name not in self.adb.get_installed_apps():
+                    self.logger.info(f"Successfully uninstalled {package_name}")
+                    return
+                
+                if i == 0:
+                    print("Please wait while uninstalling the app...")
+                time.sleep(1)
+            
+            # Si llegamos aquí, no se pudo verificar la desinstalación
+            self.logger.warning(
+                f"Uninstall command completed but {package_name} still appears installed. "
+                f"This may be a system app or the app reinstalled itself."
+            )
+            
+        except subprocess.TimeoutExpired:
+            self.logger.warning(f"Uninstall command timed out for {package_name}")
+        except FileNotFoundError:
+            self.logger.error("adb command not found. Make sure adb is in your PATH")
+        except Exception as e:
+            self.logger.warning(f"Error during uninstall of {package_name}: {e}")
+            if self.logger.level <= logging.DEBUG:
+                import traceback
+                traceback.print_exc()
 
     def get_app_pid(self, app):
         if isinstance(app, App):

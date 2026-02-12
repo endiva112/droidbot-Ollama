@@ -1,0 +1,57 @@
+{
+  "tag": "2026-02-12_145429",
+  "event": {
+    "event_type": "long_touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "More options",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          969,
+          156
+        ],
+        [
+          1080,
+          288
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 65,
+      "temp_id": 66,
+      "size": "111*132",
+      "signature": "[class]android.widget.ImageView[resource_id]None[text]None[enabled,,]",
+      "view_str": "fb3e69c4102b30c6c36cf5c556de551f",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "20",
+      "desc": "<button text='More options' bound_box=969,156,1080,288></button>"
+    },
+    "duration": 2000
+  },
+  "start_state": "a5d75543b499709f5ec31ea8b33ffa59",
+  "stop_state": "a5d75543b499709f5ec31ea8b33ffa59",
+  "event_str": "LongTouchEvent(state=a5d75543b499709f5ec31ea8b33ffa59, view=fb3e69c4102b30c6c36cf5c556de551f(SettingsActivity/ImageView-))"
+}

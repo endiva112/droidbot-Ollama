@@ -1,0 +1,49 @@
+{
+  "tag": "2026-02-12_145451",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          165,
+          1982
+        ],
+        [
+          1036,
+          2114
+        ]
+      ],
+      "resource_id": "com.google.android.deskclock:id/alarm_volume_slider",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.SeekBar",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 49,
+      "temp_id": 51,
+      "size": "871*132",
+      "signature": "[class]android.widget.SeekBar[resource_id]com.google.android.deskclock:id/alarm_volume_slider[text]None[enabled,,]",
+      "view_str": "194ab5cb6ff118ebe9086a81324b8e94",
+      "content_free_signature": "[class]android.widget.SeekBar[resource_id]com.google.android.deskclock:id/alarm_volume_slider"
+    }
+  },
+  "start_state": "d4cfd49f12fe021a17b2d9bd9f95bd8c",
+  "stop_state": "d4cfd49f12fe021a17b2d9bd9f95bd8c",
+  "event_str": "TouchEvent(state=d4cfd49f12fe021a17b2d9bd9f95bd8c, view=194ab5cb6ff118ebe9086a81324b8e94(SettingsActivity/SeekBar-))"
+}

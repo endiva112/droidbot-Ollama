@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_145507",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": "26 seconds remaining",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          216,
+          1070
+        ],
+        [
+          864,
+          1318
+        ]
+      ],
+      "resource_id": "com.google.android.deskclock:id/timer_time_text",
+      "checked": false,
+      "text": "\u221225",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 11,
+      "size": "648*248",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.deskclock:id/timer_time_text[text]\u221225[enabled,,]",
+      "view_str": "f328ec07e13ea48f1a4a14cee05d4729",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.deskclock:id/timer_time_text",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<p text='26 seconds remaining' bound_box=216,1070,864,1318>\u221225</p>"
+    }
+  },
+  "start_state": "e1aef25efc9df4806c81ff23974749dc",
+  "stop_state": "77f47409e34024704ca95d384f0deb80",
+  "event_str": "TouchEvent(state=e1aef25efc9df4806c81ff23974749dc, view=f328ec07e13ea48f1a4a14cee05d4729(ExpiredTimersActivity/TextView-\u221225))"
+}

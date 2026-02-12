@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_145404",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          574,
+          192
+        ],
+        [
+          1025,
+          251
+        ]
+      ],
+      "resource_id": "com.google.android.deskclock:id/title",
+      "checked": false,
+      "text": "Screen saver",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "451*59",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.deskclock:id/title[text]Screen saver[enabled,,]",
+      "view_str": "e34583f8863ef1cb8c43f48cec3bf338",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.deskclock:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<button bound_box=574,192,1025,251>Screen saver</button>"
+    }
+  },
+  "start_state": "c69c13d6fa0d3b4c3972709a23366ae1",
+  "stop_state": "8e64c8cb8c7f2e65e21ce5fe990704b1",
+  "event_str": "TouchEvent(state=c69c13d6fa0d3b4c3972709a23366ae1, view=e34583f8863ef1cb8c43f48cec3bf338(DeskClock/TextView-Screen sav))"
+}

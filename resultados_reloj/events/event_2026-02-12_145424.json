@@ -1,0 +1,55 @@
+{
+  "tag": "2026-02-12_145424",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.deskclock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          574,
+          324
+        ],
+        [
+          1025,
+          383
+        ]
+      ],
+      "resource_id": "com.google.android.deskclock:id/title",
+      "checked": false,
+      "text": "Settings",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "451*59",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.deskclock:id/title[text]Settings[enabled,,]",
+      "view_str": "8d9bd98b03c50a17e2a2f726236ae306",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.deskclock:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=574,324,1025,383>Settings</button>"
+    }
+  },
+  "start_state": "c69c13d6fa0d3b4c3972709a23366ae1",
+  "stop_state": "a5d75543b499709f5ec31ea8b33ffa59",
+  "event_str": "TouchEvent(state=c69c13d6fa0d3b4c3972709a23366ae1, view=8d9bd98b03c50a17e2a2f726236ae306(DeskClock/TextView-Settings))"
+}

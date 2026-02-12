@@ -262,20 +262,17 @@ Queries:
         com.google.android.deskclock
       com.google.android.googlequicksearchbox:
         com.google.android.deskclock
-      com.google.android.deskclock:
-        [com.android.localtransport,com.android.providers.settings,android,com.android.location.fused,com.android.inputdevices,com.android.emulator.multidisplay,com.android.keychain,com.android.wallpaperbackup,com.android.dynsystem,com.android.settings,com.android.server.telecom]
       com.google.android.inputmethod.latin:
         com.google.android.deskclock
       com.google.android.providers.media.module:
         com.google.android.deskclock
 
 Package Changes:
-  Sequence number=26
+  Sequence number=21
   User 0:
     seq=0, package=com.google.android.apps.wellbeing
     seq=9, package=com.google.android.gms
-    seq=22, package=com.cetacea
-    seq=25, package=io.github.ylimit.droidbotapp
+    seq=20, package=io.github.ylimit.droidbotapp
 
 
 Dexopt state:

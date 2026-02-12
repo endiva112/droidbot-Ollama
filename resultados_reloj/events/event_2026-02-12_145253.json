@@ -1,0 +1,11 @@
+{
+  "tag": "2026-02-12_145253",
+  "event": {
+    "event_type": "intent",
+    "log_lines": null,
+    "intent": "am start com.google.android.deskclock/com.android.deskclock.DeskClock"
+  },
+  "start_state": "109a3759999df697cfff8f83b112ff74",
+  "stop_state": "a4f578217ddae25e7d41d611712a8677",
+  "event_str": "IntentEvent(intent='am start com.google.android.deskclock/com.android.deskclock.DeskClock')"
+}
