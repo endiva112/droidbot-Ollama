@@ -1,0 +1,10 @@
+# Core DroidBot
+androguard==3.4.0a1
+networkx==3.4.2
+Pillow==12.1.1
+
+# HTTP requests
+requests==2.32.5
+
+# Si usas OpenAI API (opcional, comenta si no)
+# openai==2.20.0
