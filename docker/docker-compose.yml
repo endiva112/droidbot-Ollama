@@ -4,8 +4,7 @@ services:
   ollama:
     image: ollama/ollama
     container_name: droidbot-ollama
-    ports:
-      - "11434:11434"
+    network_mode: host
     volumes:
       - ollama_data:/root/.ollama
 
@@ -14,19 +13,31 @@ services:
       context: ..
       dockerfile: docker/Dockerfile
     container_name: droidbot-app
+    network_mode: host
     volumes:
       - ..:/app
     working_dir: /app
-    depends_on:
-      - ollama
     environment:
-      - OLLAMA_URL=http://ollama:11434/api/chat
+      - OLLAMA_HOST=http://localhost:11434
       - OLLAMA_MODEL=gemma3:4b
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
     stdin_open: true
     tty: true
-    command: bash
+    command: >
+      bash -c "
+      echo 'Conectando a emulador Android...';
+      adb connect host.docker.internal:5555 2>/dev/null;
+      sleep 1;
+      echo '';
+      echo 'Dispositivos conectados:';
+      adb devices;
+      echo '';
+      echo 'Listo para ejecutar DroidBot';
+      echo '';
+      echo 'Ejemplo:';
+      echo '  python start.py -a com.google.android.deskclock -o output/ -policy llm_dfs';
+      echo '';
+      exec bash
+      "
 
 volumes:
   ollama_data:
