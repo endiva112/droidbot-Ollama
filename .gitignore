@@ -63,3 +63,7 @@ Gemfile.lock
 documents
 temp
 venv
+
+# Carpetas de salida y uso
+informes/
+apks/
