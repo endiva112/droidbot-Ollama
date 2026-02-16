@@ -30,7 +30,7 @@ class LLM_Guided_Policy(UtgBasedInputPolicy):
         
         # Configuration from environment variables or defaults
         self.ollama_url = ollama_url or os.getenv("OLLAMA_URL", "http://localhost:11434/api/chat")
-        self.ollama_model = ollama_model or os.getenv("OLLAMA_MODEL", "gemma2:2b")
+        self.ollama_model = ollama_model or os.getenv("OLLAMA_MODEL", "gemma3:4b")
         
         self.logger.info(f"LLM_Guided_Policy initialized")
         self.logger.info(f"  Ollama URL: {self.ollama_url}")
